@@ -1,0 +1,20 @@
+daemonise=false
+# diskCacheRoot=/var/cache/polipo/
+diskCacheRoot=""			# cache in memory only!
+# proxyAddress=127.0.0.1
+proxyAddress=0.0.0.0
+proxyName=localhost
+serverSlots=4
+serverMaxSlots=8
+cacheIsShared=False
+allowedClients=127.0.0.1,192.168.25.61
+
+
+
+
+# Tor
+# socksParentProxy = "localhost:9050"
+# socksProxyType = socks5
+
+# redirector = /usr/bin/adzapper
+redirector = /etc/adzapper/wrapzap

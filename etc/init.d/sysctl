@@ -1,0 +1,25 @@
+#!/sbin/runscript
+# Copyright (c) 2007-2008 Roy Marples <roy@marples.name>
+# All rights reserved. Released under the 2-clause BSD license.
+
+depend()
+{
+	before bootmisc logger
+	keyword -openvz -prefix -vserver
+}
+
+start()
+{
+	local conf= retval=0
+	ebegin "Configuring kernel parameters"
+	eindent
+	for conf in /etc/sysctl.d/*.conf /etc/sysctl.conf; do
+		if [ -r "$conf" ]; then
+			vebegin "applying $conf"
+			sysctl -p "$conf" >/dev/null
+			veend $? || retval=1
+		fi
+	done
+	eoutdent
+	eend $retval "Some errors were encountered"
+}

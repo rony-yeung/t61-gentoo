@@ -1,0 +1,11 @@
+wpa
+wpa-psk
+wep-hex
+wep-passphrase
+wep-shared
+leap
+ttls
+eap
+peap
+peap-tkip
+eap-tls

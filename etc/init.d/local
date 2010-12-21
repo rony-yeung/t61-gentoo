@@ -1,0 +1,33 @@
+#!/sbin/runscript
+# Copyright (c) 2007-2008 Roy Marples <roy@marples.name>
+# All rights reserved. Released under the 2-clause BSD license.
+
+description="Executes user commands in /etc/conf.d/local"
+
+depend()
+{
+	after *
+	keyword -timeout
+}
+
+start()
+{
+	ebegin "Starting local"
+
+	if type local_start >/dev/null 2>&1; then
+		local_start
+	fi
+
+	eend $? "Failed to start local"
+}
+
+stop()
+{
+	ebegin "Stopping local"
+
+	if type local_start >/dev/null 2>&1; then
+		local_stop
+	fi
+
+	eend $? "Failed to stop local"
+}

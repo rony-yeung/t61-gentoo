@@ -1,0 +1,43 @@
+# UUID=49e8417e-4791-4d3a-b811-9d142f89d52e  /boot  ext2  noauto,noatime	1 2
+# UUID=1ab84033-a7f1-424f-adf1-8042309113b9  /      ext4  noatime		0 1
+# UUID=66d1269a-f0bd-44a3-963f-883bed8ca1eb  /      ext4  noatime		0 1
+
+LABEL=500G1_BOOT   /boot    ext2   noatime,noauto                                 1 2
+LABEL=500G1_BTRFS  /        btrfs  noatime,thread_pool=2,subvol=gentoo_buildroot  0 1
+LABEL=500G1_BTRFS  /gentoo  btrfs  noatime,thread_pool=2,subvol=gentoo_portage    0 1
+LABEL=500G1_SWAP   none     swap   noauto,sw                                      0 0
+
+/dev/cdrom		/mnt/cdrom	auto		noauto,ro	0 0
+
+none  /var/cache/cups            tmpfs  noatime,mode=0755  0 0
+none  /var/cache/fontconfig      tmpfs  noatime,mode=0755  0 0
+none  /var/cache/pdnsd           tmpfs  noatime,mode=0750,uid=102  0 0
+# /var/cache/pdnsd/pdnsd.cache 0640 102 0
+none  /var/cache/polipo          tmpfs  noatime,mode=0755,uid=103  0 0
+none  /var/cache/revdep-rebuild  tmpfs  noatime,mode=0700          0 0
+none  /var/lib/pdnsd             tmpfs  noatime,mode=0755,uid=102  0 0
+none  /var/lib/tor               tmpfs  noatime,mode=0755,uid=105  0 0
+none  /var/lock                  tmpfs  noatime,mode=0775,uid=0,gid=10  0 0
+# /var/lock/subsys  0755 0 0
+none  /var/tmp       tmpfs  noatime,mode=0755,size=3200M                    0 0
+
+
+
+none  /tmp           tmpfs  noatime,mode=1777,size=3200M                    0 0
+none  /root          tmpfs  noatime                                         0 0
+none  /home/brother  tmpfs  noatime,mode=0700,size=3200M,uid=1000,gid=1000  0 0
+
+# {{{ noauto mount points
+UUID=858b3e5b-fa91-40a1-b740-03c531c4e135  /mnt/sdcard  btrfs noatime,noauto,user,compress,ssd_spread  0 0
+UUID=799c86ce-026b-4cdf-867d-974d899ce192  /mnt/data    btrfs noatime,noauto,subvol=data,uid=1000,gid=1000          0 0
+# Camera SD 2GB
+UUID=1234-5678                             /mnt/camera  auto  noatime,noauto                 0 0
+# }}}
+UUID=10C0-C930                             /mnt/tv250g  auto  noatime,noauto,iocharset=utf8  0 0
+
+# /dev/sda1: LABEL="USB16G_BOOT"      UUID="49e8417e-4791-4d3a-b811-9d142f89d52e" TYPE="ext2" 
+# /dev/sda2: LABEL="USB16G_GENTOO64"  UUID="b33aeec3-5a56-46ce-a484-a715161893ee" TYPE="ext4" 
+# /dev/sda3: LABEL="USB16G_BUILDROOT" UUID="66d1269a-f0bd-44a3-963f-883bed8ca1eb" TYPE="ext4" 
+# /dev/sda4: LABEL="USB16G_UBUNTU32"  UUID="6b2787f3-9ef4-446a-b359-f51de94c2b8e" TYPE="ext4" 
+#
+# /dev/sda3: LABEL="USB16G_BUILDROOT" UUID="66d1269a-f0bd-44a3-963f-883bed8ca1eb" TYPE="ext4" 

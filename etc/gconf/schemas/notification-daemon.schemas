@@ -1,0 +1,118 @@
+<gconfschemafile>
+ <schemalist>
+
+  <schema>
+   <key>/schemas/apps/notification-daemon/popup_location</key>
+   <applyto>/apps/notification-daemon/popup_location</applyto>
+   <owner>notification-daemon</owner>
+   <type>string</type>
+   <default>bottom_right</default>
+   <locale name="C">
+    <short>Popup location</short>
+    <long>Default popup location on the workspace for stack notifications. Allowed values: &quot;top_left&quot;,&quot;top_right&quot;,&quot;bottom_left&quot; and &quot;bottom_right&quot;</long>
+   </locale>
+
+   <locale name="ar">
+    <short>موقع التنبيه</short>
+    <long>الموضع الافتراضي للتنبيهات على مساحة العمل لصف التنبيهات. القيم الممكنة هي: &quot;top_left&quot;,&quot;top_right&quot;,&quot;bottom_left&quot; و &quot;bottom_right&quot;</long>
+   </locale>
+
+   <locale name="de">
+    <short>Popup Position</short>
+    
+   </locale>
+
+   <locale name="it">
+    <short>Posizione popup</short>
+    <long>Posizione predefinita di comparsa sull&apos;area di lavoro per impilare le notifiche. Valori ammessi: &quot;top_left&quot;, &quot;top_right&quot;, &quot;bottom_left&quot; e &quot;bottom_right&quot;</long>
+   </locale>
+
+   <locale name="pl">
+    <short>Położenie wyskakującego okna</short>
+    <long>Domyślne położenie wyskakującego okna na obszarze roboczym dla stosu powiadomień. Dozwolone wartości: &quot;top_left&quot;,&quot;top_right&quot;,&quot;bottom_left&quot; i &quot;bottom_right&quot;</long>
+   </locale>
+
+   <locale name="sv">
+    <short>Popup-position</short>
+    <long>Standardposition för popup-rutor på arbetsutan för notifieringar. Tillåtna värden: &quot;top_left&quot;,&quot;top_right&quot;,&quot;bottom_left&quot; och &quot;bottom_right&quot;</long>
+   </locale>
+  </schema>
+
+  <schema>
+   <key>/schemas/apps/notification-daemon/theme</key>
+   <applyto>/apps/notification-daemon/theme</applyto>
+   <owner>notification-daemon</owner>
+   <type>string</type>
+   <default>standard</default>
+   <locale name="C">
+    <short>Current theme</short>
+    <long>The theme used when displaying notifications.</long>
+   </locale>
+
+   <locale name="ar">
+    <short>النسق الحالي</short>
+    <long>النسق المستخدم عند عرض التنبيهات</long>
+   </locale>
+
+   <locale name="de">
+    <short>Aktuelles Thema</short>
+    <long>Das Thema um Benachrichtigungen anzuzeigen.</long>
+   </locale>
+
+   <locale name="it">
+    <short>Tema attuale</short>
+    <long>Il tema usato nel mostrare le notifiche.</long>
+   </locale>
+
+   <locale name="nl">
+    <short>Huidige thema</short>
+    <long>Het thema dat voor de berichtweergave wordt gebruikt.</long>
+   </locale>
+
+   <locale name="pl">
+    <short>Obecny motyw</short>
+    <long>Motyw używany podczas wyświetlania powiadomień.</long>
+   </locale>
+
+   <locale name="sv">
+    <short>Aktuellt tema</short>
+    <long>Temat som används för visning av notifieringar.</long>
+   </locale>
+  </schema>
+
+  <schema>
+   <key>/schemas/apps/notification-daemon/sound_enabled</key>
+   <applyto>/apps/notification-daemon/sound_enabled</applyto>
+   <owner>notification-daemon</owner>
+   <type>bool</type>
+   <default>1</default>
+   <locale name="C">
+    <short>Sound Enabled</short>
+    <long>Turns on and off sound support for notifications.</long>
+   </locale>
+
+   <locale name="it">
+    <short>Suono abilitato</short>
+    <long>Attiva e disattiva il supporto audio alle notifiche.</long>
+   </locale>
+  </schema>
+
+  <schema>
+   <key>/schemas/apps/notification-daemon/default_sound</key>
+   <applyto>/apps/notification-daemon/default_sound</applyto>
+   <owner>notification-daemon</owner>
+   <type>string</type>
+   <default></default>
+   <locale name="C">
+    <short>Default Sound</short>
+	 <long>The default sound file used unless a notification supplies the 'sound-file' or 'suppress-sound' hint.  Leave empty for no default sound.</long>
+   </locale>
+
+   <locale name="it">
+    <short>Suono predefinito</short>
+	 <long>Il file audio predefinito usato, a meno che una notifica non fornisca l&apos;hint &apos;sound-file&apos; o &apos;suppress-sound&apos;. Lasciare in bianco per non usare alcun suono predefinito.</long>
+   </locale>
+  </schema>
+
+ </schemalist>
+</gconfschemafile>

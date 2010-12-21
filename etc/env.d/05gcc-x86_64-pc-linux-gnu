@@ -1,0 +1,6 @@
+MANPATH="/usr/share/gcc-data/x86_64-pc-linux-gnu/4.5.1/man"
+INFOPATH="/usr/share/gcc-data/x86_64-pc-linux-gnu/4.5.1/info"
+LDPATH="/usr/lib/gcc/x86_64-pc-linux-gnu/4.5.1:/usr/lib/gcc/x86_64-pc-linux-gnu/4.5.1/32"
+PATH="/usr/x86_64-pc-linux-gnu/gcc-bin/4.5.1"
+ROOTPATH="/usr/x86_64-pc-linux-gnu/gcc-bin/4.5.1"
+GCC_SPECS=""
