@@ -3,4 +3,5 @@
 #
 # IMPORTANT: Be sure to run depscan.sh after modifiying the
 # IFACE variable
-IFACE=ppp0
+#IFACE=ppp0
+IFACE=wlan0
