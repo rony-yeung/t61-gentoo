@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 #
-# Freshmeat release version 3.5.
+# Release: 20090301 -> Wed Nov 17 16:38:32 EST 2010 (except some bigpond decor)
 #
 # See the home page at:
 #	http://adzapper.sourceforge.net/
@@ -1112,8 +1112,9 @@ sub proxy_munge($$)
 
 __DATA__
 ##
-## Last updated Thu May  8 16:29:10 EST 2008.
+## Last updated Wed Nov 17 16:38:32 EST 2010 (except some bigpond decor).
 ##
+#list commen
 NOZAP (*://**)?NOZAP $1
 PRINT http://((www*.|)washingtonpost.com)/wp-dyn/articles/(A[0-9]*).html http://$1/ac2/wp-dyn/$3?language=printer
 PRINT http://((www*.|)news.utoronto.ca)/bin6/(*).asp http://$1/bin6/print/$3.htm
@@ -1438,11 +1439,13 @@ AD http://ad.openfind.com.tw/cgi-bin/AD/advimage.exe?**
 AD http://**/recip*/*.(gif|jpg)
 AD http://ad.adware.hu/adware.big?**
 AD http://ad.adware.hu/richfile.big?**
+AD http://feedads*.googleadservices.com/**/i?*
 AD http://pagead*.googlesyndication.com/pagead/imgad?**
 ADJSTEXT http://pagead*.googlesyndication.com/pagead/*.js
 ADHTMLTEXT http://pagead*.googlesyndication.com/pagead/ads?**
 ADHTMLTEXT http://groups.google.com/groups/adfetch?**
 ADHTMLTEXT http://*.mootermedia.com/ads/moot?page_view_id=**
+WEBBUG http://mfhclive.112.2O7.net/b/**
 WEBBUG http://www.google.com/ig/images/tick.gif?**
 WEBBUG http://www.google-analytics.com/__utm.gif?**
 WEBBUG http://pagead*.googlesyndication.com/pagead/imp.gif**
@@ -1474,6 +1477,7 @@ AD http://(www*.|)redzee.com/adsredirect.htm**
 ADSWF http://(ads*.|)clicksor.com/serving/flash/**
 ADSWF http://[a-z][a-z].voice2page.com/**.swf**
 ADSWF http://*.smartadserver.com/**.swf**
+ADSWF http:/*.ads.hexus.net/**.swf**
 AD http://adverts.lrfairplay.com/adredir.imgw?**
 AD http://adverts.lrfairplay.com/getadvert.imgw?**
 AD http://**/RealMedia/ads/adstream_nx.(ads|cgi)/**
@@ -1506,8 +1510,12 @@ ADHTML http://ads*.quarterserver.de/adserver/servlet/view/html/zone?**
 ADPOPUP http://ads*.quarterserver.de/adserver/servlet/view/window/internal;**
 ADPOPUP http://ads*.revenue.net/**pop.html**
 ADPOPUP http://*.smartadserver.com/*/show*.asp?**
+ADJS http://a.kerg.net/delivery/fa.php?**
 ADJS http://*.liberation.fr/inc/smartad.js
+ADSWF http://ads*/www/delivery/ajs.php?**
+ADJS http://*.smarttargetting.com/**smartad.jsp?**
 ADSWF http://*.smartadserver.com/**.swf**
+ADSWF http://ads*/www/delivery/ai.php?**
 ADSWF http://ads*.quarterserver.de/kelkoo/*.swf**
 ADSWF http://aa.voice2page.com/**.swf**
 ADSWF http://(www*.|)scoop.co.nz/adserver/creative/**.swf**
@@ -1518,15 +1526,21 @@ ADSWF http://ad2.ip.ro/logos/*.swf?**
 ADSWF http://194.145.249.110/images/logoAnim*.swf
 ADSWF http://img-catgeo.paginegialle.it/clienti/**/A/*.swf**
 ADSWF http://*.tiser.com.au/images/**.swf**
+ADSWF http://*.specificclick.net/**swf
 ADJS http://*.tiser.com.au/jserver/**
+ADJS http://ds1.harmony-central.com/jserver/**
 ADJS http://ad-uk.tiscali.com/jserver/**
+ADJS http://afe.specificclick.net/AFECache
+ADJS http://afe.specificclick.net/?**&t=j**
 AD http://*.tiscali.co.uk/**/images/*-logo-*.(gif|jpg)
 AD http://*.tiser.com.au/nserver/**
 AD http://*.tiser.com.au/images/**
 AD http://*/[Aa]d[Ss]erver/creative/**
+AD http://*.specificmedia.com/**.jpg
 ADHTML http://ad2.ip.ro/please/code?**
 ADHTML http://ads.specificpop.com/code?**
 ADHTML http://ads.specificclick.com/code?**
+ADHTML http://afe.specificclick.net/?**&t=h**
 ADHTML http://www.imdb.com/google/box?**
 ADHTML http://**/RealMedia/ads/adstream_sx.ads/**
 ADHTML http://ad.aboutwebservices.com/cgi-bin/ad/**
@@ -1570,13 +1584,14 @@ AD http://*.casalemedia.com/V2/**.(gif|jpg)
 AD http://(www*.|)nightscapecreations.com/newsite/imgs/contest*.jpg
 AD http://*.clicrevenus.com/cgi-bin/affc0?*.gif**
 AD http://s*.xperformance.net/sys/ads?**
+AD http://adsfac.net/ffp.asp?**;js=no**
 ADHTML http://as.casalemedia.com/s?**
 ADHTML http://*/ads/[0-9]*.htm
 ADHTML http://sfads.osdn.com/*.html
 ADHTML http://ads.osdn.com/?ad_id=**
 ADHTML http://focusin.ads.targetnet.com/ad/id=*opt=hhj*
 ADTHTML http://adsfac.net/ffp.asp?loc=*&js=no
-ADJS http://adsfac.net/ad.asp?loc=**
+ADJS http://adsfac.net/(ad|ffp).asp?loc=**
 ADSWF http://adsfac.net/ag.asp?**
 AD http://adsfac.net/getCreative.asp?**
 AD http://focusin.ads.targetnet.com/ad/id=*opt=hij*
@@ -1589,6 +1604,7 @@ AD http://ar.atwola.com/content/**
 ADJS http://ar.atwola.com/html/**;ctype=application/x-javascript**
 ADJS http://ar.atwola.com/file/adsWrapper.js
 ADJS http://ar.atwola.com/file/adsEnd.js
+ADJS http://mads.com.com/**?**&celt=js**
 ADJS http://**/ads/adstream_(m|)jx.ads/**
 ADJS http://*.flycast.com/FlycastUniversal/
 ADJS http://*.flycast.com/**/js/**
@@ -1623,8 +1639,7 @@ WEBBUG http://view.atdmt.com**/view/**
 AD http://view.atdmt.com/avenuea/view/**
 AD http://sp*.atdmt.com/b/**.(gif|jpg)
 AD http://sp*.atdmt.com/ds/**.(gif|jpg)
-AD http://*/img.atdmt.com/**.(gif|jpg)
-AD https://*/img.atdmt.com/**.(gif|jpg)
+AD http://*/img.atdmt.com/**.(gif|GIF|jpg|JPG)**
 ADJS http:/view.atdmt.com/*/jview/**
 PASS http://(www&.|)bankrate.com/**
 PASS http://(www*.|)comcast.net/**nav.swf**
@@ -1745,7 +1760,8 @@ ADPOPUP http://**popover.cfm?**
 ADPOPUP http://**popunder;**
 ADPOPUP http://**popunder.(asp|htm)**
 ADPOPUP http://**-popback-*.htm*
-REWRITE http://ad.doubleclick.net/clk;*?(http:**) $1
+REWRITE http://ad.doubleclick.net/clk;*?(http**) $1
+REWRITE http://fls.doubleclick.net/act;*rdr=?(http**) $1
 PASS http://ad.doubleclick.net/crossdomain.xml
 PASS http://*.doubleclick.net/clk;**
 PASS http://fastbuy.doubleclick.net/WebSteps?**
@@ -1763,7 +1779,8 @@ AD http://ads*.ad-flow.com/?DC=**
 AD http://ads*.ad-flow.com/?SIT=**
 AD http://(www*.|)bepaid.com/images/*.gif
 AD http://stats.adage.com/sponsors/*/banners/**
-AD http://*.img.pheedo.com/img.phdo?**
+AD http://*.pheedo.com/img.phdo?**
+AD http://*.pheedo.com/bgimg.php?**
 AD http://*.valueclick.com/**cycle?**
 AD http://*.valueclick.com/ad.s/*.gif
 AD http://image.click2net.com/?**
@@ -1773,6 +1790,7 @@ AD http://*.pointroll.com/DefaultAd/?**
 AD http://(www*.|)click-fr.com/print.cgi?a=**
 AD http://(www*.|)click-fr.com/printj.cgi?a=**
 ADHTML http://(www*|).click-fr.com/printk.cgi?a=**
+ADHTML http://(www.|)pheedo.com/ad.php?**
 ##AD http://(www*.|)theregister.co.uk/media/*.gif
 AD http://(www*.|)theregister.co.uk/media/1098.gif
 ADHTML http://a.tribalfusion.com/f.ad?**
@@ -1781,6 +1799,7 @@ ADJS http://a.tribalfusion.com/j.ad?**
 AD http://*tribalfusion.*/media/**.(gif|jpg)
 AD http://a.tribalfusion.com/i.ad?**
 ADSWF http://*tribalfusion.*/**.swf?**
+ADSWF http://(www.|)pheedo.com/images/**.swf**
 ADSWF http://*.pointroll.com/**/Media/**.swf**
 ADSWF http://(www*.|)europemedia.net/art/*_(button|banner).swf
 ADSWF http://(www*.|)der-schacht.com/**/banner*.swf
@@ -1790,6 +1809,7 @@ ADSWF http://**java*.yahoo.com/**.swf**
 ADSWF http://(www*.|)theregister.co.uk/media/*.swf
 ADSWF http://movies.go.com/img/movie_search.swf
 ADSWF http://(www*.|)beijing-olympic.org.cn/eolympic/image/title_*.swf
+ADSWF http://*.2mdn.net/**.swf
 ADSWF http://(www*.|)nrl.com.au/s200[0-9]/images/flash/intro.swf
 AD    http://(www*.|)nrl.com.au/s200[0-9]/images/frontpage/*banner*.gif
 AD    http://(www*.|)nrl.com.au/s200[0-9]/images/stateoforigin/*banner*.gif
@@ -1893,6 +1913,8 @@ AD http://(www*.|)whatisthematrix.com/234x60_v5.gif
 AD http://images.resellerratings.com/images/prices/*.(gif|jpg)
 ADHTML http://(www*.|)resellerratings.com/price-direct-theinquirer.pl
 ADHTML http://www.gizmag.com/ads/**.htm
+ADHTML http://www.gizmag.com/ads.php**
+ADHTML http://cp.intl.match.com/eng/prm/**.html
 ADPOPUP http://**ads/**popups/**.html
 ADPOPUP http://**popups/**promo**.html
 ADPOPUP http://32.96.232.10/teleweb/autopop/pop.asp?**
@@ -1970,13 +1992,14 @@ ADJS http://adserv.ads-tracker.com:8080/server/js-ad/client/realgn.com/banner/**
 ADJS http://adserv.bravenet.com/cpceng.php?*type=sponsorbar*
 ADJS http://mercury.bravenet.com/rover/**
 ADJS http://au.java.yahoo.com/java/js_template/468_*.js
-ADJS http://**/adjs.php?**
+ADJS http://**/adjs.php**
 ADJS http://www.timesonline.co.uk/genads/**.js
 ADJS http://news.ninemsn.com.au/9msnshared/spac.js
 PASS http://adserver.yahoo.com/a?*p=broadcast*
 WEBBUG http://geo.yahoo.com/f?**
 WEBBUG http://*.adserver.yahoo.com/l?**
 WEBBUG http://www.bravenet.com/setcookie.php
+WEBBUG http://*.statcamp.net/logging/**
 ADHTML http://*.yahoo.com/java/js_template/728_reg_061501_loop_true.js
 ADHTML http://ypn-js.overture.com/d/search/p/ypn/jsads/?**
 ADHTML http://**/phpads.php**
@@ -2002,12 +2025,18 @@ ADSWF http://(www*.|)qrz.com/pix/**.swf**
 ADSWF http://hypecouncil.com--live.com/flv/**.swf**
 ADSWF http://(www*.|)hypemakers.net/**/creative/**.swf
 ADSWF http://**.swf?clickTag=**
-ADJS http://web.unltd.info/adx.js
-ADJS http://adserv*.adtech.de/?addyn**
+ADSWF http://adtech.panthercustomer.com/apps/**.swf**
+ADSWF http://eas.statcamp.net//media**.swf**
+ADJS http://**/adx.js
+ADJS http://adserv*.adtech*/?addyn**
+ADJS http://adserv*.adtech*/addyn/**
+ADJS http://adforce*/?addyn**
 ADTEXT http://ads.addynamix.com/**
 AD http://*.media.addynamix.com/**.gif**
 AD http://(www*.|)qrz.com/pix/[0-9]*.gif
 AD http://adserv*.adtech.de/?adserv**
+AD http://adtech.panthercustomer.com/apps/**.(jpg|gif|png)
+AD http://helios.aftenposten.no/adserv**
 AD http://*/iserver/**/AAMSZ=**
 AD http://(*.|)nytimes.com/adx/**.(jpg|gif)
 AD http://graphics*.nytimes.com/marketing/**.(gif|jpg)
@@ -2087,8 +2116,14 @@ AD http://ad.*/cgi-bin/rotate.php*?*
 AD http://**/468x60**.gif
 AD http://**/(adview|adimage|viewbanner).php?**
 AD http://admech.*.com/AdCall.asp?**
+AD http://oa.techcrunch.com/openads/www/delivery/ai.php?**&contenttype=(gif|jpeg)**
 AD http://images.trafficmp.com/tmpad/**.gif
+AD http://*.trafficmp.com/a/bpix?**
+AD http://**/delivery/lg.php?bannerid=**
+WEBBUG http://oa.techcrunch.com/openads/www/delivery/lg.php?bannerid=**
+WEBBUG http://i.ixnp.com/**.gif
 ADHTML http://*.trafficmp.com/tmpad/banner/itrack*.asp?**
+ADHTML http://*.trafficmp.com/a/i?**
 ADHTML http://(www*.|)sponsorads.de/click.php?**
 ADHTML http://info-ad.de/oben.php?**
 ADHTML http://openads.zeads.com/www/delivery/afr.php?**
@@ -2106,6 +2141,7 @@ PASS http://*.ergophizmiz.com/**
 PASS http://*.mini-itx.com/**
 PASS http://www.saunalahti.fi/~ojn/photos/popup.html?**
 PASS http://(*.|)pbs.org/includes/tvschedules/**popup.htm**
+PASS http://(*.|)regiftable.com/regiftingrobinpopup.html
 ADPOPUP **popup.htm**
 ADPOPUP http://ad.iwin.com/tmpad/**.htm
 ADPOPUP http://ad.iwin.com/tmpad/content/netflix/rollover.html
@@ -2138,6 +2174,13 @@ ADPOPUP http://(www*.|)bt-chat.com/overlib.js
 COUNTER http://**/werbung/ziAdCount?**
 PASS http://(www*.|)kodi.de/werbung/**
 # ad: de:werbung,anzeige da:reklame no:annonser es:reklaam
+ADJS http://(anzeige|werbung|WERBUNG|annonser|reklame|reklaam).*/**.([Jj][Ss])
+ADJS http://helios.aftenposten.no/addyn**
+ADJS http://annonser.dagbladet.no/eas?**;js=y
+AD http://annonser.dagbladet.no/eas?**;cre=img
+ADHTML http://www.dagbladet.no/inc3/hmarg/dblinker.php
+ADHTML http://annonser.dagbladet.no/eas?**
+AD http://(anzeige|werbung|WERBUNG|annonser|reklame|reklaam).*/**.([Gg][Ii][Ff]|[Jj][Pp][Gg])
 AD http://**/(anzeige|werbung|WERBUNG|annonser|reklame|reklaam)/**.([Gg][Ii][Ff]|[Jj][Pp][Gg])
 AD http://*.de/images/wrb/**
 # several patterns from Sergey Smirnov
@@ -2155,6 +2198,7 @@ ADHTML http://**.adbutler.*/view.php?**inv=if**
 ADHTML http://imgserv.adbutler.*/ieservad?**
 ADHTML http://imgserv.adbutler.*/adserve/**type=iframe**
 ADHTML http://channels.real.com/getlatest.glh?**
+ADHTML http://(www.|)smh.com.au/adredirect.html?ad=**
 WEBBUG http://tracking.starmedia.com/track.gif**
 WEBBUG http://c.ninemsn.com.au/c.gif?**
 ADJS http://ds.starmedia.com/jserver/**
@@ -2180,11 +2224,14 @@ AD http://**/ban/ani[0-9]*.gif
 AD http://(www*.|)nmnews.net/images/ani**.gif
 AD http://(www*.|)fxsound.com/grfx/dfx_animated.gif
 AD http://*/animeu/*.gif
+AD http://cdn.eyewonder.com/**.gif
+ADJS http://cdn.eyewonder.com/**/*.js?**
 ADJS http://imgserv.adbutler.com/jad?**
 ADJS http://*.cybereps.com:8880/jserver**
 ADJS http://216.148.128.89/jserver/**
 ADJS http://home.netscape.com/h.js
 ADJS http://*.usercash.com/**.js
+ADHTML http://img.mediaplex.com/cgi-bin/html/**
 ADHTML http://*.usercash.com/*.php**
 ADHTML http://www.megaupload.com/adbrite.php?**
 ADPOPUP http://**/ads/popup.shtml
@@ -2254,12 +2301,14 @@ ADHTML http://xads.zedo.com/ads*/[a-z]?**
 ADHTML http://ccas.clearchannel.com/CCAS_tag.html?**
 ADPOPUP http://c*.zedo.com/jsc/c1/ff2.html?**
 WEBBUG http://c[0-9].zedo.com/*/0/0/0/blank.gif
+WEBBUG http://adlog.com.com/adlog/i/**
 ADSWF http://**/bannerfarm/**.swf
 ADSWF http://adsys.townnews.com/*/creative/**.swf**
 PASS http://ads.vnuemedia.com/ads/amusementbusiness/**
 PASS http://(www*.|)acmehorses.com/media/ads/**
 PASS http://(www*.|)emagen.com.au/Ads/**
 PASS http://www.yamaha-motor.com.au/images/**
+PASS http://images.apple.com/getamac/ads/**
 AD http://*ads.zedo.com/ads2/[a-z]?**
 AD http://**/([Aa][Dd][Ss]|_ads|ad.s|ads2|adsart|ars-ads|bfarm|bannerfarm|liveads|adlinks|[Bb]anner*[Aa]ds)/**.([Gg][Ii][Ff]|[Jj][Pp][Gg])**
 AD http://**/ads.(pl|cgi)?**
@@ -2291,6 +2340,8 @@ PASS http://nx1.salon.com/RealMedia/ads/click_lx.ads/www.salonmagazine.com/**.ht
 PASS http://cache.ultramercial.com/ads/**.html
 ADHTML http://**/ads/**.html**
 ADSWF http://**/ads/**.swf
+WEBBUGJS http://static.woopra.com/js/woopra.js
+WEBBUGJS http://s.clicktale.net/WRa.js
 WEBBUGJS http://a[0-9]*.g.akamai*.net/**/stats.hitbox.com/js/**.js
 WEBBUG http://*.hitbox.com/HG**
 WEBBUG http://hits.gureport.co.uk/HG**
@@ -2388,7 +2439,7 @@ PASS http://(www*.|)trading*post.com.au/ContentManagement/**
 PASS http://www.agentpp.com/**.gif
 PASS http://www.parallels.com/files/img/**
 PASS http://(www*.|)wavefield-inseis.com/images/**
-PASS http://*.ezpublish.no/var/ezwebin_site/storage/images/**
+PASS http://*/var/ezwebin_site/storage/images/**
 PASS http://(www*.|)matrox.com/*/banners/**
 PASS http://(www*.|)research.att.com/**
 PASS http://(www*.|)javasoft.com/images/banners/*.gif
@@ -2404,6 +2455,13 @@ PASS http://virtuallythere.com/cgi-bin/mqcustomconnect?**
 PASS http://(www*.|)parentingplace.com/images/banners/*.gif
 PASS http://**/banners/**spacer.gif
 PASS http://image.weather.com/pics/banners/banner_general.jpg
+PASS http://s3.amazonaws.com/twitter_production/**
+PASS http://(www.|)tvs.org.au/rw_common/themes/**
+PASS http://(www.|)telstra.com.au/banners/**
+PASS http://(www.|)alifexi.org/images/**
+PASS http://(www.|)moxa.com/banner/**
+PASS http://static.gamesradar.com/images/**
+PASS http:/bigpond.com/cms/res/unmetered/images/**
 AD http://(www*.|)planet3dnow.de/images/zusatz/*.gif
 AD http://(www*.|)sueddeutsche.de/sz/misc/marktplatz/**.gif
 AD http://**/([Aa]dvert|ADVERT|advbn|adgifs|blipverts|showsell|*[Bb]anner|bann|bannerlink|linkbacks|liveads|adproof|SiteSponsor|spon)**.([Gg][Ii][Ff]|[Jj][Pp][Gg]|[Pp][Nn][Gg])*
@@ -2441,6 +2499,7 @@ WEBBUG http://*.yimg.com/**/i/**.jpg?**sig=**
 PASS http://*.yimg.com/**/(bin|auc)/**.gif
 PASS http://*.yimg.com**/(i|xp|cx)/**.(gif|jpg)
 ADSWF http://*.yimg.com/**/*[0-9]x[1-9]*.swf**
+AD http://l.yimg.com/cv/ae/us/**.swf
 AD http://*.yimg.com**/(a|adv|ba2)/**.(gif|jpg)
 AD http://**/banners/*.banner
 AD http://**/Banners/Images/**
@@ -2483,6 +2542,7 @@ AD http://**/sponsor/*.gif
 AD http://**/(banners|banniere)/**.jpg
 AD http://**/ban/*.gif
 AD http://**/ban/*.jpg
+ADHTML http://www.s2d6.com/**
 ADHTML http://ad.preferences.com/iframe;**
 ADHTML http://ad.preferences.com/oframe;**
 ADJS http://ad.preferences.com/oscript;**
@@ -2697,7 +2757,7 @@ AD http://(www*.|)hitlogger.com/nstats-web/banner.gif
 COUNTERJS http://(www*.|)top-chart.de/code/code_tc4.js
 COUNTERJS http://((www*.|)web-chart.de|151.189.43.51)/counter.js
 PASS http://ads.vnuemedia.com/js.ng/Site=amusementbusiness&**
-ADJS http://adforce*/?addyn**
+ADJS http://adserv.*/**.js
 ADJS http://(www*.|)efront.com/adserve.jscript/**
 ADJS http://(www*.|)geocities.com/js_source/pu5geo.js
 ADJS http://(www*.|)geocities.com/js_source/ygNSLib9.js?*
@@ -2858,6 +2918,7 @@ AD http://(www*.|)nypostonline.com/images/p6teaser/*.gif
 AD http://(www*.|)eweek.com/dropdown/*.jpg
 AD http://bs[0-9]*.gmx.net/[0-9]**
 AD http://**/advertisers/*.gif
+PASS http://*.yimg.com**/a/i/**/twip/yahoo_twip*.swf
 ADSWF http://**/advertise(|r(|s))/**.swf**
 ADSWF http://temp.customize.org/*.swf
 ADSWF http://(www*.|)gamespy.com/aspcommon/120x38/arcade_120x38.swf
@@ -3197,6 +3258,8 @@ ADPOPUP http://fdimages.fairfax.com.au/crtvs/*pop*.html
 ## stripping the ? seems to break their image cache service
 ##REWRITE (http://farm*.static.flickr.com/*/buddyicons/*.jpg)?[0-9]* 302:$1
 ADHTML http://*xml.eshop.msn.com/xmlbuddy/eShopOffer.aspx?**
+ADJSTEXT http://adsyndication.msn.com/delivery/getads.js
+AD http://adsyndication.msn.com/delivery/**
 AD http://*image.eshop.msn.com/img/merch/**.(gif|jpg)
 AD http://*image.eshop.msn.com/img/sinv/**.jpg
 AD http://*xml.eshop.msn.com/trackofferimpression.aspx?**
@@ -3333,9 +3396,11 @@ ADJS http://hit*.vioclicks.com/s3.asp?**
 ADJS http://ad.erotik-click.de/myad_show.php*?**
 ADJS http://(www*.|)porntrack.com/sexblocks/*.phtml?**
 ADJS http://ads*.erotism.com/adults.js
+ADJS http://js.peepfinder.com/**.js
 ADJS http://(www*.|)cash2002.de/cgi-bin/cash_x.cgi?**
 ADJS http://(www*.|)babebusters.com/clickzs.js
 ADJS http://*.clickzs.com/**.js
+ADJS http://*.clickhype.com/servlet/view/banner/javascript/zone?**
 ADJS http://adcontroller.unicast.com/java**/wrapper.js
 ADJS http://adcontroller.unicast.com/java/HTMLad_utils/ad2applet.js
 ADHTML http://adcontroller.unicast.com/upload/**.html
@@ -3492,9 +3557,16 @@ AD http://(www*.|)komotv.com/art/frontbadges/**
 PRINT http://(www*.|)komotv.com/stories/([0-9]*[0-9]).htm http://www.komotv.com/news/printstory.asp?id=$2
 ADJS http://*.blogads.com/**/feed.js
 WEBBUGHTML http://hb.lycos.com/header?**
+WEBBUG http://dynamic.fmpub.net/adserver/adlog.php?**
+WEBBUG http://tenzing.fmpub.net/?**
+WEBBUGJS http://static.fmpub.net/tracking/**
+WEBBUGJS http://static.fmpub.net/site/**
+WEBBUGJS http://edge.quantserve.com/quant.js
 WEBBUGJS http://*.imrworldwide.com/v5.js
 COUNTERJS http://*.imrworldwide.com/*.js
 REWRITE http://switch.atdmt.com/action/msn_hm_*_signup_link?href=(**) $1
+WEBBUG http://acvs.mediaonenetwork.net/client/pixel.gif
+WEBBUG http://pixel.quantserve.com/pixel**
 WEBBUG http://*.imrworldwide.com/cgi-bin/m?**
 WEBBUG http://*.imrworldwide.com/cgi-bin/count**
 WEBBUG http://images-aud.slashdot.org/pc.gif?**
@@ -3515,10 +3587,14 @@ WEBBUG http://images*.slashdot.org/Slashdot/pc.gif?**
 WEBBUG http://dot.idot.cz/?**
 WEBBUG http://(*.|)vibrantmedia.com/system/SetURLCookie.asp?**
 WEBBUG http://(*.|)vibrantmedia.com/**/1x1.gif
+AD http://*.dynamitedata.com/cgi-bin/display_image.pl?**
+AD http://*.dynamitedata.com/pods/**.(jpg|gif)
 AD http://itxt.vibrantmedia.com/al.asp?ipid=**
 ADHTML http://itxt.vibrantmedia.com/al.asp?**
+WEBBUGHTML http://*.dynamitedata.com/cgi-bin/search.pl?**
 ADHTML http://*.bbmedia.cz/please/showit/**?typkodu=html**
 ADJS http://*.bbmedia.cz/please/showit/**?typkodu=js**
+ADJS http://*.dynamitedata.com/pods/**.js
 ADSWF http://*.im.cz/reklama/**.swf**
 ADSWF http://*.im.cz/r/**.swf**
 ADSWF http://(www*.|)seznam.cz/rek/**.swf
@@ -3541,6 +3617,7 @@ ADHTML http://alypaa.com/voice
 # www.msn.fi
 WEBBUG http://c.msn.fi/c.gif?**
 ADSWF http://track.adform.net/Flash/**
+ADSWF http://track.adform.net/**.swf**
 # www.iltalehti.fi
 ADSWF http://www.iltalehti.fi/ilmkuvat/**.swf?**
 AD http://www.iltalehti.fi/ilmkuvat/**.gif
@@ -3562,11 +3639,17 @@ ADHTML http://www.shooshtime.com/adserver/view.php?*
 ADHTML http://www.shooshtime.com/affiframe.php
 ADHTML http://shooshtime.com/afffp.php
 ADHTML http://www.dumpanimage.com/aff/aff.html
+ADHTML http://promo.cams.com/promo/*frame.jsp**
+ADHTML http://promo.ulust.com/cgb/index*.php?**
+AD http://images.ulust.com/**
 AD http://graphics.adultfriendfinder.com/images/piclist/promo/**.jpg
 ADJS http://adultfriendfinder.com/piclist?*
 ADJS http://banners.adultfriendfinder.com/piclist?*
+ADHTML http://banners.adultfriendfinder.com/piclist?**
+ADHTML http://banners.adultfriendfinder.com/go/page/**
 ADPOPUP http://www.adultactioncam.com/?*
 ADPOPUP http://www.datecam.com/exits_dynamic/index.php?*
+ADSWF http://graphics.pop6.com/banners/**.swf
 ADSWF http://player.videosz.com/win-style-dark.swf
 # www.engadget.com
 ADSWF http://*.engadget.com/common/media/griffin.swf
@@ -3609,6 +3692,8 @@ ADJS http://ad.idnes.cz/**.js?**
 ADJS http://ad.iaa.cz/ad/**.js
 ADJS http://asn.premium.cz/**.js
 ADHTML http://ad*.atlas.cz/adhtml*.asp?**
+PASS http://www.professionalmuscle.com/[Pp][Mm]_[Ll]ogo*.(gif|jpg)
+AD http://www.professionalmuscle.com/*.(gif|jpg)
 AD http://ad.lupa.cz/cgi-bin/banredir.cgi?**
 AD http://ad.adrenaline.cz/adrun.dll?**
 AD http://arbo.bbmedia.cz/logos/**
@@ -3670,6 +3755,7 @@ ADSWF http:/www*.betway.com/itat?action=asset_req**
 ADSWF http://hingis.betway.com/tbm/IT/TBM_foot/*.swf**
 ADHTML http://netshelter.adtrix.com/serve.cgi?**
 ADHTML http://(www*.|)ecasinoads.com/*.htm
+ADHTML http://adisfy.com/iAd.php
 ADHTML http://(www*.|)zipzoomfly.com/jsp/AD_Banner/*.jsp
 ADHTML http://network.boyis.com/traffic/topframe.asp?**
 ADPOPUP http://network.boyis.com/traffic/maiocco.asp?ADV=**
@@ -3809,6 +3895,7 @@ ADHTML http://jupiter.bravenet.com/rover/f?*ctype=0*
 ADHTML http://www.wallpaperlove.com/bonus.htm
 ADHTML http://(www.|)adtology*.com/**.htm
 ADHTML http://ads.datinggold.com/iframe*.php?**
+ADHTML http://adweb2.hornymatches.com/bthumb/page.php?**
 ADHTML http://*.falkag.(de|net)/server/rich.asp?cmd=ifr&**
 ADJS http://*.falkag.(de|net)/dat/**.js
 ADPOPUP http://*.falkag.(de|net)/server/rich.asp?**
@@ -3823,7 +3910,7 @@ AD http://(www*.|)astalavista.box.sk/*-ani.gif
 AD http://desktopsunlimited.com/images/virtual*.gif
 AD http://**/virtuagirl*_[1-9]*[Xx][1-9]*.gif
 AD http://(www*.|)animewallpapers.com/h/tcg/ban**.gif
-AD http://ads.datinggold.com/(pic|show.banner)*.php?**
+AD http://*ads.datinggold.com/(pic|show.banner)*.php?**
 AD http://www.wallpaperlove.com/*messages.gif
 AD http://icons.ilse.nl/icons/adverts/**.(gif|jpg)
 AD http://*.tradedoubler.com/imp/img/**
@@ -3844,16 +3931,28 @@ AD http://admin.digitalacre.com/images/**.(GIF|gif)
 AD http://cyber-knowledge.net/blog/images/hm.gif
 AD http://sportsbybrooks.com/farkbutton.gif
 AD http://huuto.net/fi/huutonet/bannerit/*
-AD http://ads.**.(gif|jpe?g)
-AD http://*.ads.**.(gif|jpe?g)
+AD http://ads.**.(gif|jpg|jpeg)
+AD http://*.ads.**.(gif|jpg|jpeg)
 AD http://ad.erotik-click.de/banner/*.gif
 AD http://(www*.|)joinfree.ro/adult20.jpg
 AD http://(www*.|)gm.com/nonflash_homepage/images/story*.jpg
 AD http://ads.adorigin.com/?SIT=**
 AD http://*/kanoodle_img.php?**
+AD http://(cachep|promos).fling.com/geo/**.jpg
 AD http://exit.silvercash.com/exit/**.(jpg|gif)
+AD http://pics.camazon.com/**
+AD http://pcash.imlive.com/releasese/images/**.gif
+AD http://*.img.awempire.com/**.jpg
+ADHTML http://adson.awempire.com/iframes/**
+ADHTML http://iframes.awempire.com/**
+ADHTML http://geo.camazon.com/?**
 ADHTML http://exit.silvercash.com/exit/**.html
+ADHTML http://ts.protraffic.com/as.html?**
+ADHTML http://promos.fling.com/geo/custom/home.htm?**
+ADHTML http://promos.fling.com/static/**.htm?**
+ADHTML http://pcash.imlive.com/releasese/ActivePage*.asp?**
 ADHTML http://*.wecloseyoursales.com/**.asp
+ADHTML http://ads.webcamclub.com/iframe/?**
 ADHTML http://fapomatic.com/aff*.html
 ADHTML http://context*.kanoodle.com/cgi-bin/ctpub_adserv.cgi?id=**
 ADHTML http://ads.adorigin.com/?**DH=Y**
