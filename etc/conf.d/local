@@ -5,6 +5,28 @@ local_start() {
 	# This is a good place to load any misc programs
 	# on startup (use &>/dev/null to hide output)
 
+	echo 5 > /proc/sys/vm/swappiness
+
+	[ -f /home/brother/rsync-home.sh ] || rsync -a /home/brother.git/ /home/brother
+
+	# Bluetooth off
+	[ -f /proc/acpi/ibm/bluetooth ] && echo disable > /proc/acpi/ibm/bluetooth
+
+	# ThinkPad battery lock between 40-70%
+	[ -f /sys/devices/platform/smapi/BAT0 ] && {
+		echo 40 > /sys/devices/platform/smapi/BAT0/start_charge_thresh
+		echo 70 > /sys/devices/platform/smapi/BAT0/stop_charge_thresh
+	}
+
+	# Harddrive APM set to 254
+	ls /dev/disks/by-id/ | grep -q HTS545050B9A300 && hdparm -B 254 /dev/sda
+
+#	[ -f /var/cache/pdnsd/pdnsd.cache ] || {
+#		touch /var/cache/pdnsd/pdnsd.cache
+#		chmod 640 /var/cache/pdnsd/pdnsd.cache
+#		chown pdnsd:root /var/cache/pdnsd/pdnsd.cache
+#	}
+
 	# We should always return 0
 	return 0
 }
@@ -12,6 +34,8 @@ local_start() {
 local_stop() {
 	# This is a good place to unload any misc.
 	# programs you started above.
+
+	rsync -a /home/brother/ /home/brother.git
 
 	# We should always return 0
 	return 0
