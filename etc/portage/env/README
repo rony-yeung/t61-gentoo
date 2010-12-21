@@ -1,0 +1,39 @@
+('ebuild', '/', 'dev-libs/gmp-5.0.1', 'merge'), Log file:
+
+ *  ('ebuild', '/', 'dev-libs/ppl-0.10.2-r1', 'merge'), Log file:
+
+('ebuild', '/', 'dev-libs/libpcre-8.02', 'merge'), Log file:
+
+('ebuild', '/', 'sys-libs/ncurses-5.7-r5', 'merge'), Log file:
+
+('ebuild', '/', 'sys-process/procps-3.2.8-r1', 'merge'), Log file:
+
+ *  ('ebuild', '/', 'dev-lang/perl-5.12.1-r1', 'merge'), Log file:
+
+('ebuild', '/', 'sys-apps/dbus-1.2.24', 'merge'), Log file:
+
+ *  ('ebuild', '/', 'dev-lang/python-2.6.5-r3', 'merge'), Log file:
+
+('ebuild', '/', 'sys-apps/file-5.04', 'merge'), Log file:
+
+ *  ('ebuild', '/', 'dev-lang/python-3.1.2-r4', 'merge'), Log file:
+
+('ebuild', '/', 'dev-libs/glib-2.24.1-r1', 'merge'), Log file:
+
+ *  ('ebuild', '/', 'dev-libs/dbus-glib-0.86', 'merge'), Log file:
+
+('ebuild', '/', 'sys-fs/udev-160', 'merge'), Log file:
+
+ *  ('ebuild', '/', 'dev-lang/swig-2.0.0', 'merge'), Log file:
+
+ *  ('ebuild', '/', 'sys-boot/grub-static-0.97-r9', 'merge'), Log file:
+
+ *  ('ebuild', '/', 'dev-util/boost-build-1.42.0', 'merge'), Log file:
+
+ *  ('ebuild', '/', 'dev-libs/boost-1.42.0-r1', 'merge'), Log file:
+
+ *  ('ebuild', '/', 'net-libs/webkit-gtk-1.2.3', 'merge'), Log file:
+
+ *  ('ebuild', '/', 'app-misc/strigi-0.7.2', 'merge'), Log file:
+
+ *  ('ebuild', '/', 'app-text/poppler-0.14.1', 'merge'), Log file:

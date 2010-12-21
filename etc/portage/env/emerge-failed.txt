@@ -1,0 +1,9 @@
+coreutils
+gtk+
+======= scim
+======= scim-tables
+======= scim-pinyin
+zim
+imagemagick
+gimp
+awesome

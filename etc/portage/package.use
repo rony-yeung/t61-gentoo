@@ -1,0 +1,131 @@
+app-portage/eix optimization sqlite strong-optimization
+#net-misc/openssh X hpn -pam
+net-misc/openssh hpn -pam
+net-misc/tucan gtk
+# dev-vcs/subversion perl -dso -python
+dev-vcs/subversion -perl -dso -python
+sys-apps/man lzma
+dev-lang/python sqlite
+sys-devel/gcc -fortran lto
+sys-kernel/gentoo-sources symlink
+sys-apps/busybox static -mdev
+app-portage/layman cvs git mercurial subversion
+net-dns/bind-tools urandom
+# Cairo +cleartype/+lcdfilter for Firefox
+#x11-libs/cairo X cleartype xcb
+x11-libs/cairo X lcdfilter xcb opengl
+dev-lang/swig ccache
+
+# Freetype -bindist to enable BCI
+media-libs/freetype X -bindist -auto-hinter
+media-fonts/dejavu X
+x11-terms/rxvt-unicode afterimage truetype xterm-color -vanilla wcwidth
+
+# required by mplayer-mt
+media-libs/libass enca
+
+# Avoid libgomp.so.1 missing bug
+app-arch/tar static
+
+app-emulation/emul-linux-x86-xlibs opengl
+media-libs/imlib2 X
+media-gfx/imagemagick lcms
+x11-libs/pango X
+app-text/ghostscript-gpl linguas_zh_CN linguas_zh_TW
+app-text/poppler cjk curl
+media-fonts/arphicfonts X
+media-gfx/imagemagick X
+app-arch/advancecomp mng
+net-proxy/tsocks tordns
+net-proxy/privoxy threads
+media-gfx/geeqie exif lcms xmp
+media-gfx/exiv2 xmp
+net-wireless/wpa_supplicant dbus
+sys-fs/udev extras
+sys-apps/dbus X
+sys-power/pm-utils ntp
+app-i18n/scim-tables linguas_zh
+app-editor/vim vim-pager
+x11-libs/libdrm libkms
+dev-vcs/git tk
+dev-lang/tcl threads
+dev-lang/tk threads xscreensaver
+
+# required by firefox
+# www-client/chromium requires +icu
+dev-db/sqlite icu secure-delete unlock-notify
+
+net-print/cups gnutls
+net-libs/xulrunner custom-optimization system-sqlite wifi
+www-client/firefox custom-optimization system-sqlite wifi -linguas_en linguas_en_US
+net-libs/farsight2 msn
+net-misc/curl ares idn nss threads
+sys-process/htop -unicode
+app-admin/conky X curl hddtemp imlib iostats lua rss thinkpad vim-syntax wifi
+media-fonts/unifont X
+
+net-im/pidgin gnutls idn qq
+media-gfx/gimp curl exif lcms mng pdf smp wmf
+app-office/abiword -wmf grammar spell thesaurus wordperfect
+net-im/bitlbee jabber oscar ssl yahoo msn nss gnutls twitter
+net-irc/weechat lua relay
+
+x11-libs/gtk+ tiff
+x11-libs/gdk-pixbuf tiff
+dev-libs/libcdio cddb
+mail-mta/ssmtp md5sum
+
+media-sound/abcde aac cdparanoia flac id3 lame normalize replaygain vorbis
+media-video/mplayer ftp raido vpx -cdparanoia
+net-analyzer/nmap gtk lua
+net-libs/libpcap bluetooth libnl
+media-plugins/gst-plugins-meta X v4l v4l2 -flac -mad
+sys-fs/lvm2 -lvm1
+app-accessibility/speech-tools X
+www-client/elinks X bittorrent ftp idn javascript lua nntp
+media-fonts/corefonts X
+x11-misc/zim graphviz screenshot
+net-misc/wicd X
+sci-geosciences/googleearth mdns-bundled
+sys-apps/coreutils -xattr
+net-misc/rsync -xattr
+net-im/skype qt-static
+sys-power/powertop -unicode
+media-libs/gd fontconfig
+media-libs/mesa gallium
+app-misc/fdupes md5sum-external
+app-editors/gvim gtk
+www-client/lynx cjk gnutls -ssl
+media-fonts/terminus-font X -ru-g
+# sys-power/cpufreqd acpi lm_sensors nforces nvidia pmu
+media-video/vcdimager xml
+media-video/avidemux gtk libsamplerate -sdl
+media-sound/sox encode ffmpeg id3tag wavpack
+media-video/ffmpeg X custom-cflags dirac schroedinger theora threads v4l2 vaapi vdpau vpx video_cards_nvidia
+app-text/hunspell linguas_en
+x11-base/xorg-drivers input_devices_synaptics video_cards_nouveau video_cards_intel
+net-irc/weechat -spell
+sys-boot/grub -truetype
+dev-lang/ruby threads
+sys-fs/btrfs-progs acl
+sys-apps/portage python3
+dev-util/geany -vte
+dev-lang/sun-jdk X nsplugin
+www-plugins/adobe-flash 64bit -32bit -nspluginwrapper
+dev-java/sun-jdk X nsplugin
+media-fonts/cfonts X
+net-misc/aria2 bittorrent metalink scripts xmlrpc
+net-libs/libtorrent -ipv6
+net-p2p/rtorrent -ipv6 daemon
+net-misc/slimrat -X
+dev-lang/perl ithreads	# Not needed and may introduce compatibility problems. (slimrat needs ithread)
+www-client/chromium system-sqlite system-v8 -gecko-mediaplayer
+
+# Ekiga
+net-libs/opal sip
+net-libs/ptlib wav
+
+media-libs/libvpx postproc sse3
+media-video/gpac a52 ffmpeg
+media-video/x264-encoder ffmpeg
+sci-libs/fftw threads

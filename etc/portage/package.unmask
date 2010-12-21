@@ -1,0 +1,4 @@
+>=dev-lang/v8-2.5.9.1
+www-client/chromium
+dev-util/chromium-tools
+=x11-drivers/xf86-video-nouveau-9999

@@ -1,0 +1,2 @@
+export CFLAGS="${CFLAGS} -fno-lto"
+export CXXFLAGS="${CXXFLAGS} -fno-lto"

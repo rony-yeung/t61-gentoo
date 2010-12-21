@@ -1,0 +1,8 @@
+  media-libs/libvpx **
+# net-irc/weechat **
+  net-misc/slimrat **
+  sys-boot/grub **
+  sys-devel/binutils **
+# sys-devel/libtool **
+# sys-fs/btrfs-progs **
+  www-client/luakit **
