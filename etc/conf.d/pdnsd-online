@@ -1,0 +1,6 @@
+# Enter the interface that connects you to the dns servers
+# This will correspond to /etc/init.d/net.${IFACE}
+#
+# IMPORTANT: Be sure to run depscan.sh after modifiying the
+# IFACE variable
+IFACE=ppp0

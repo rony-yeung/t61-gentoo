@@ -1,0 +1,159 @@
+# This blank configuration will automatically use DHCP for any net.*
+# scripts in /etc/init.d.  To create a more complete configuration,
+# please review /etc/conf.d/net.example and save your configuration
+# in /etc/conf.d/net (this file :]!).
+
+#blacklist_aps="PCCW"
+#blacklist_aps_wlan0="PCCW"
+#blacklist_aps_wlan0="default"
+
+# modules="udhcpc"
+#modules="dhcpc"
+
+dns_servers_lo=("127.0.0.1")
+
+
+#---------------------------------------------------------------
+# eth0 (e1000)
+#---------------------------------------------------------------
+# (1) LAN dhcp client
+
+#	config_eth0=("dhcp")
+#        config_eth0="192.168.1.61/24 brd 192.168.1.255"
+#        routes_eth0="default via 192.168.1.1"
+        config_eth0="192.168.1.61/24 brd 192.168.1.255"
+        routes_eth0="default via 192.168.1.1"
+
+
+# (2) for Buffalo LS-PRO
+#	config_eth0=("192.168.11.61/24")
+
+
+#/---------------------------------------------------------------
+# ppp0
+#---------------------------------------------------------------/
+
+#modules_ppp0="!udhcpc"
+#dhcpc_ppp0="-t 10"
+link_ppp0="eth0"
+plugins_ppp0="pppoe"
+config_ppp0="ppp"
+username_ppp0='******@**********.***'
+password_ppp0='******'
+#pppd_ppp0=("updetach" "defaultroute" "usepeerdns" "ipcp-accept-remote" "ipcp-accept-local" "holdoff 3" "debug" "ipcp-echo-interval 15" "ip-echo-failure 3")
+pppd_ppp0="updetach debug defaultroute usepeerdns
+  ipcp-accept-remote ipcp-accept-local holdoff 3
+  lcp-echo-interval 15 lcp-echo-failure 3"
+
+#/---------------------------------------------------------------
+# wlan0 (iwl4965)
+#---------------------------------------------------------------/
+    modules_wlan0="wpa_supplicant"
+    wpa_supplicant_wlan0="-Dwext"
+    config_wlan0="dhcp"
+
+    # essid_wlan0="Tenda"
+    # essid_wlan0="TP-LINK"
+    # essid_wlan0="asus"
+      essid_wlan0="wlhdd25"
+    # essid_wlan0="Wireless"
+    # essid_wlan0="cafeogf"
+
+    # config_eth0="192.168.1.61/24 brd 192.168.1.255"
+    # routes_eth0="default via 192.168.1.1"
+
+    # config_wlan0="192.168.1.6/24 brd 192.168.1.255"
+    # routes_wlan0="default via 192.168.1.1"
+
+    config_wlan0="192.168.25.61/24"
+    routes_wlan0="default via 192.168.25.1"
+
+    # config_wlan0="192.168.0.61/24"
+    # routes_wlan0="default via 192.168.0.1"
+
+    # Asus AM604G
+    # config_wlan0="192.168.60.61/24"
+    # routes_wlan0="default via 192.168.60.1"
+
+    # CafeOGF
+    # config_wlan0="192.168.11.120/24"
+    # routes_wlan0="default via 192.168.11.1"
+
+    # wpa_timeout_wlan0=20
+
+    # Enable power management for your wireless card
+    # iwconfig_wlan0="power on"
+    # nis_domain_lo="homepc"
+
+    # dns_servers_wlan0=("127.0.0.1")
+    dns_servers_wlan0=("127.0.0.1")
+
+#---------------------------------------------------------------
+# eth1 (zd1211rw)
+#---------------------------------------------------------------
+	modules_eth1="wpa_supplicant"
+	config_eth1="dhcp"
+
+	essid_eth1="asus"
+	#essid_eth1="wlhdd25"
+	#config_eth1="192.168.25.61/24"
+
+	#essid_eth1="cafeogf"
+
+	wpa_supplicant_eth1="-Dwext"
+	wpa_timeout_eth1=20
+
+
+#preup() {
+#	if [[ ${IFACE} == "wlan0" ]]; then
+#		if(cat /sys/devices/platform/thinkpad_acpi/hotkey_radio_sw | grep -e "0" > /dev/null); then
+#			ewarn "Thinkpad wireless switch is disabled"
+#			return 1
+#		fi
+#		#Use `find /sys/devices/ -name "rf_kill"` to find the right location for this:
+#		#echo 0 > /sys/devices/pci0000:00/0000:00:1c.1/0000:03:00.0/rf_kill
+#		#sleep 3
+#	fi
+#	return 0
+#}
+preup() {
+	[ ${IFACE} == "wlan0" ] && modprobe iwlagn
+	[ ${IFACE} == "eth0" ] && odprobe e1000e
+	return 0
+}
+postdown() {
+#	[ ${IFACE} == "wlan0" ] && rmmod iwlagn iwlcore
+	[ ${IFACE} == "eth0" ] && rmmod e1000e
+	return 0
+}
+
+
+
+
+
+#the interface is really replaced by br0 for outgoing, so if you had dhcp here, you'll use dhcp in br0
+#config_wlan0="null"
+
+#this specifies that interface vbox0 will be a tap interface and use the tunctl command to generate itself
+#tuntap_vbox0="tap"
+
+#ALL interfaces part of a bridge should be null, otherwise oddities may occur.
+#config_vbox0="null"
+
+# you can specify an owner of the interface if you want to run virtual box as a non root user
+# [COMMENT from a reader: VirtualBox should never be run as root]
+#tunctl_vbox0="-u adm"
+
+#If you'd prefer a dynamic ip address for the machine, use
+#config_br0="dhcp"
+#config_br0="192.168.1.62/24"
+#routes_br0="default via 192.168.1.1"
+#this specifies the bridging information
+#bridge_br0="wlan0 vbox0"
+#Make sure your baselayout is recent enough to support this
+#depend_br0() 
+#{
+#	need net.wlan0
+#	need net.vbox0
+#}
+#brctl_br0=( "setfd 0")
