@@ -1,0 +1,1 @@
+../gentoo/portage/profiles/default/linux/amd64/10.0
